@@ -11,10 +11,7 @@ def paper_neighbors(grid: list[list[str]], loc: tuple[int, int]) -> int:
 
 
 def can_be_removed(grid: list[list[str]], loc: tuple[int, int]) -> bool:
-    if grid[loc[0]][loc[1]] == "@" and paper_neighbors(grid, loc) < 4:
-        return True
-    else:
-        return False
+    return grid[loc[0]][loc[1]] == "@" and paper_neighbors(grid, loc) < 4
 
 
 def find_removable(grid: list[list[str]]) -> list[tuple[int, int]]:
